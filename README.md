@@ -16,8 +16,7 @@
   *  `validate`:是否验证填写数据类型和dataType类型匹配
 * `style`:控件样式
 * `wrapperStyle`:控件包装样式，border、padding等
-* `extension`:扩展属性(控件区别)
-  * ``
+* `extension`:扩展属性(每种控件扩展属性都有区别)
 ## 二、input控件
 ```json
 
