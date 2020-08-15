@@ -7,7 +7,7 @@
   * bool类型 false为可见，true为不可见
 * `label`:控件标签 
   * `description`:标签描述
-    *  `icon`:图标描述
+    * `icon`:图标描述
     * `desc`:文字描述
   * `title`:标签标题
 * `validateProps`:控件验证规则
@@ -26,6 +26,7 @@
   * `limitHeight`:当控件是image时 是否保持上传的图片尺寸必须和第一张相同
   * `multiple`:是否显示多行
   * 。。。。。
+
 ## 二、rules  相当于if else 判断来更改控件属性值 常用于控制 控件的显示与隐藏
 * `conditio`:匹配规则 
 * `components`:参与的组件
