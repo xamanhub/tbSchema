@@ -26,7 +26,7 @@
   * `limitHeight`:当控件是image时 是否保持上传的图片尺寸必须和第一张相同
   * `multiple`:是否显示多行
   * 。。。。。
-## 三、rules
+## 二、rules 
 * `conditio`:匹配规则 
 * `components`:参与的组件
   * 组件id:{
@@ -34,20 +34,57 @@
   }
   * 例：
 ```json
-{
-	"condition": "${moduleData.mode}==1",  
-	"components": {
-		"arrayConSetting": {
-			"invisible": false
+"rules": [{
+		"condition": "${moduleData.mode}==1",
+		"components": {
+			"arrayConSetting": {
+				"invisible": false
+			},
+			"otherSetting": {
+				"invisible": true
+			}
 		},
-		"otherSetting": {
-			"invisible": true
-		}
+		"desc": ""
 	},
-	"desc": ""
-}
+	{
+		"condition": "${moduleData.mode}==2",
+		"components": {
+			"arrayConSetting": {
+				"invisible": true
+			},
+			"otherSetting": {
+				"invisible": false
+			}
+		},
+		"desc": ""
+	}
+]
 ```
-## 三、控件
+## 三、layout 布局
+* 例： 
+```json
+"layout": [{
+		"children": [
+			"pageImage",
+			"pageLink"
+		],
+		"root": true,
+		"id": "1510911008848_3"
+	},
+	{
+		"children": [],
+		"root": false,
+		"id": "pageImage"
+	},
+	{
+		"children": [],
+		"root": false,
+		"id": "pageLink"
+	}
+]
+```
+**必须有一个root为true**
+## 四、控件
 ### 1、Container控件
 ```json
 "1569315122982_1": {
