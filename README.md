@@ -26,7 +26,7 @@
   * `limitHeight`:当控件是image时 是否保持上传的图片尺寸必须和第一张相同
   * `multiple`:是否显示多行
   * 。。。。。
-## 二、rules  相当于if else 判断来更改控件属性值
+## 二、rules  相当于if else 判断来更改控件属性值 常用于控制 控件的显示与隐藏
 * `conditio`:匹配规则 
 * `components`:参与的组件
   * 组件id:{
@@ -88,7 +88,7 @@
 ## 四、控件
 ### 1、Container控件 容器组件，该组件没有任何功能
 ```json
-"1569315122982_1": {
+"ContainerID": {
 	"wrapperStyle": {
 		"height": "10px"
 	},
@@ -108,7 +108,7 @@
 * `multiple`：是否显示多行
 * `max`：最多输入字符数，不写为无限
 ```json
-"1519127662740_1": {
+"InputID": {
 	"extension": {
 		"useReg": false,
 		"multiple": true,
@@ -138,7 +138,7 @@
 ```
 ### 3、InteractVideo控件  上传视频组件
 ```json
-"1519810282589_4": {
+"InteractVideoID": {
 	"extension": {},
 	"wrapperStyle": {},
 	"dataName": "videoInfo",
@@ -160,7 +160,7 @@
 ```
 ### 4、Range控件   数字区间组件
 ```json
-"1519822104586_4": {
+"RangeID": {
 	"extension": {
 		"dataMap": {
 			"start": "startPrice",
@@ -194,7 +194,7 @@
 ### 5、Skip控件   跳转链接组件
 * `url`：跳转地址
 ```json
-"1519822104586_2": {
+"SkipID": {
 	"extension": {
 		"text": "新建分类",
 		"url": "//siteadmin.tmall.com/category/index.htm"
@@ -220,6 +220,131 @@
 		"dataType": "",
 		"required": false,
 		"validate": false
+	}
+}
+```
+### 6、SingleImage组件  上传图片组件
+* `dele`:选择后是否可以删除图片
+* `limitHeight`:图片尺寸是否必须一致
+* `needCrop`:选择图片后是否需要剪裁
+```json
+"SingleImageID": {
+	"extension": {
+		"dialogType": "dialog",
+		"relateData": "wigete_id",
+		"sendDataType": "url",
+		"dele": true,
+		"moduleType": "single_image",
+		"limitHeight": false,
+		"text": "添加图片",
+		"config": {
+			"minHeight": 0,
+			"maxHeight": 1500,
+			"mime": "jpg,png",
+			"needCrop": false,
+			"minWidth": 0,
+			"type": "pic",
+			"maxWidth": 750
+		},
+		"url": "//sucai.wangpu.taobao.com/select.htm"
+	},
+	"wrapperStyle": {
+		"paddingBottom": "4px"
+	},
+	"invisible": false,
+	"dataName": "pic",
+	"style": {
+		"width": "auto",
+		"height": "90px"
+	},
+	"label": {
+		"description": {
+			"icon": "",
+			"desc": ""
+		},
+		"title": "轮播主图"
+	},
+	"type": "SingleImage",
+	"validateProps": {
+		"dataType": "Image",
+		"required": false,
+		"validate": false
+	}
+}
+```
+### 7、Select组件  下拉框组件
+```json
+"selectID": {
+	"extension": {
+		"defaultValue": 1,
+		"placeholder": "请选择人群数量",
+		"dataSource": [{
+				"label": "1",
+				"value": 1
+			},
+			{
+				"label": "2",
+				"value": 2
+			},
+			{
+				"label": "3",
+				"value": 3
+			},
+			{
+				"label": "4",
+				"value": 4
+			},
+			{
+				"label": "5",
+				"value": 5
+			}
+		]
+	},
+	"wrapperStyle": {
+		"paddingBottom": "20px",
+		"borderBottom": "1px solid #E1E1E1",
+		"marginTop": "20px"
+	},
+	"invisible": false,
+	"dataName": "crowd_count",
+	"style": {
+		"width": "auto",
+		"height": "auto"
+	},
+	"label": {
+		"description": {
+			"icon": "",
+			"desc": "请选择需要添加的人群数量"
+		},
+		"title": "人群数量"
+	},
+	"type": "Select",
+	"validateProps": {
+		"dataType": "",
+		"required": false,
+		"validate": false
+	}
+}
+```
+### 8、Map组件  
+* 和Container一样没有功能，只能当做容器使用
+* 和Containe的不同：
+  * 在取数据时它里面的子控件是包含在他dataName的json custom_1:{name1:"值1",...}
+  * 他自己有layout ，不需要再最外的layout写
+```json
+"MapID": {
+	"layout": [],
+	"components": {
+	},
+	"wrapperStyle": {
+		"marginBottom": "15px",
+		"borderBottom": "1px solid #E1E1E1"
+	},
+	"dataName": "custom_1",
+	"type": "Map",
+	"validateProps": {
+		"required": false,
+		"validate": true
 	}
 }
 ```
