@@ -348,3 +348,47 @@
 	}
 }
 ```
+
+### 9、Radio组件    单选框组件
+```json
+"RadioID": {
+	"extension": {
+		"confirm": {},
+		"shape": "button",
+		"size": "medium",
+		"defaultValue": "1",
+		"type": "",
+		"dataSource": [{
+				"label": "通用模式",
+				"value": "1"
+			},
+			{
+				"label": "人群模式",
+				"value": "2"
+			}
+		]
+	},
+	"wrapperStyle": {
+		"marginTop": 0
+	},
+	"invisible": false,
+	"dataName": "mode",
+	"style": {
+		"margin": "0 auto",
+		"width": "185px"
+	},
+	"label": {
+		"description": {
+			"icon": "",
+			"desc": ""
+		},
+		"title": ""
+	},
+	"type": "Radio",
+	"validateProps": {
+		"dataType": "Text",
+		"required": false,
+		"validate": false
+	}
+}
+```
