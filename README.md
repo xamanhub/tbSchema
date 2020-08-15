@@ -444,4 +444,34 @@
 	}
 }
 ```
-
+### 10、Link组件    链接选择组件
+```json
+"LinkID": {
+	"extension": {
+		"config": {},
+		"url": "//siteoperateplatform.taobao.com/open/link"
+	},
+	"wrapperStyle": {
+		"paddingBottom": "4px"
+	},
+	"invisible": false,
+	"dataName": "url",
+	"style": {
+		"width": "auto",
+		"height": "auto"
+	},
+	"label": {
+		"description": {
+			"icon": "link",
+			"desc": "轮播点击链接"
+		},
+		"title": ""
+	},
+	"type": "Link",
+	"validateProps": {
+		"dataType": "Link",
+		"required": false,
+		"validate": false
+	}
+}
+```
