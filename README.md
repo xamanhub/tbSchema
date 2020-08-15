@@ -26,7 +26,7 @@
   * `limitHeight`:当控件是image时 是否保持上传的图片尺寸必须和第一张相同
   * `multiple`:是否显示多行
   * 。。。。。
-## 二、rules 
+## 二、rules  相当于if else 判断来更改控件属性值
 * `conditio`:匹配规则 
 * `components`:参与的组件
   * 组件id:{
@@ -60,7 +60,7 @@
 	}
 ]
 ```
-## 三、layout 布局
+## 三、layout 布局 控件的排列顺序
 * 例： 
 ```json
 "layout": [{
@@ -83,9 +83,10 @@
 	}
 ]
 ```
-**必须有一个root为true**
+**必须有一个控件的root属性为true，通常有Map、Container等可以包含子控件的**
+
 ## 四、控件
-### 1、Container控件
+### 1、Container控件 容器组件，该组件没有任何功能
 ```json
 "1569315122982_1": {
 	"wrapperStyle": {
@@ -103,7 +104,9 @@
 	"type": "Container"
 }
 ```
-### 2、Input控件
+### 2、Input控件  输入框组件
+* `multiple`：是否显示多行
+* `max`：最多输入字符数，不写为无限
 ```json
 "1519127662740_1": {
 	"extension": {
@@ -133,7 +136,7 @@
 	}
 }
 ```
-### 3、InteractVideo控件
+### 3、InteractVideo控件  上传视频组件
 ```json
 "1519810282589_4": {
 	"extension": {},
@@ -155,7 +158,7 @@
 	}
 }
 ```
-### 4、Range控件
+### 4、Range控件   数字区间组件
 ```json
 "1519822104586_4": {
 	"extension": {
@@ -188,7 +191,8 @@
 	}
 }
 ```
-### 5、Skip控件
+### 5、Skip控件   跳转链接组件
+* `url`：跳转地址
 ```json
 "1519822104586_2": {
 	"extension": {
