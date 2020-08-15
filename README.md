@@ -359,9 +359,10 @@
 }
 ```
 
-### 9、Radio组件    单选框组件
+### 9、Radio组件    单选框组件  有两种展示效果
+* 按钮效果：当`style`属性里的width设置了值时，显示为按钮效果
 ```json
-"RadioID": {
+"RadioID1": {
 	"extension": {
 		"confirm": {},
 		"shape": "button",
@@ -402,3 +403,45 @@
 	}
 }
 ```
+* 普通单选圈圈：当`style`属性里的height和width都为auto时，显示为普通的单选圈圈效果
+```json
+"RadioID2": {
+	"extension": {
+		"confirm": {},
+		"shape": "",
+		"size": "large",
+		"defaultValue": "2",
+		"type": "",
+		"dataSource": [{
+				"label": "是",
+				"value": "1"
+			},
+			{
+				"label": "否",
+				"value": "2"
+			}
+		]
+	},
+	"wrapperStyle": {},
+	"invisible": false,
+	"dataName": "isUntouch",
+	"style": {
+		"width": "auto",
+		"height": "auto"
+	},
+	"label": {
+		"description": {
+			"icon": "",
+			"desc": ""
+		},
+		"title": "是否禁止滑动"
+	},
+	"type": "Radio",
+	"validateProps": {
+		"dataType": "Number",
+		"required": false,
+		"validate": false
+	}
+}
+```
+
