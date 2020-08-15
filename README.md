@@ -24,8 +24,30 @@
   * `defaultValue`:默认值
   * `dataSource`:数据选择源 数组类型
   * `limitHeight`:当控件是image时 是否保持上传的图片尺寸必须和第一张相同
+  * `multiple`:是否显示多行
   * 。。。。。
-## 二、控件
+## 三、rules
+* `conditio`:匹配规则 
+* `components`:参与的组件
+  * 组件id:{
+  	属性:值
+  }
+  * 例：
+```json
+{
+	"condition": "${moduleData.mode}==1",  
+	"components": {
+		"arrayConSetting": {
+			"invisible": false
+		},
+		"otherSetting": {
+			"invisible": true
+		}
+	},
+	"desc": ""
+}
+```
+## 三、控件
 ### 1、Container控件
 ```json
 "1569315122982_1": {
@@ -93,6 +115,70 @@
 		"dataType": "Map",
 		"required": true,
 		"validate": true
+	}
+}
+```
+### 4、Range控件
+```json
+"1519822104586_4": {
+	"extension": {
+		"dataMap": {
+			"start": "startPrice",
+			"end": "endPrice"
+		},
+		"startText": "过滤价格",
+		"placeholder": "￥",
+		"endText": "元"
+	},
+	"wrapperStyle": {},
+	"dataName": "filterPrice",
+	"style": {
+		"width": "auto",
+		"height": "auto"
+	},
+	"label": {
+		"description": {
+			"icon": "",
+			"desc": ""
+		},
+		"title": ""
+	},
+	"type": "Range",
+	"validateProps": {
+		"dataType": "Map",
+		"required": false,
+		"validate": false
+	}
+}
+```
+### 5、Skip控件
+```json
+"1519822104586_2": {
+	"extension": {
+		"text": "新建分类",
+		"url": "//siteadmin.tmall.com/category/index.htm"
+	},
+	"wrapperStyle": {
+		"marginTop": "-10px"
+	},
+	"dataName": "skip",
+	"style": {
+		"width": "auto",
+		"height": "auto"
+	},
+	"label": {
+		"description": {
+			"icon": "",
+			"endIcon": "arrow-double-right",
+			"desc": ""
+		},
+		"title": ""
+	},
+	"type": "Skip",
+	"validateProps": {
+		"dataType": "",
+		"required": false,
+		"validate": false
 	}
 }
 ```
