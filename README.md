@@ -475,4 +475,41 @@
 	}
 }
 ```
-<img src="https://img.alicdn.com/imgextra/i1/39767794/O1CN01VDVbvC27RhVz3tNus_!!39767794.gif"/>
+### 11、Array组件    
+```json
+"arrayID": {
+	"components": {},
+	"dataName": "array",
+	"extension": {
+		"defaultValue": true,
+		"placeholder": "placeholder",
+		"useReg": false
+	},
+	"invisible": false,
+	"label": {
+		"description": {
+			"desc": "数组",
+			"icon": ""
+		},
+		"title": "数组"
+	},
+	"layout": [{
+		"children": [],
+		"id": "1597821517787_1",
+		"root": true
+	}],
+	"style": {
+		"height": "auto",
+		"width": "auto"
+	},
+	"type": "Array",
+	"validateProps": {
+		"dataType": "Array",
+		"max": 6,
+		"min": 1,
+		"required": false,
+		"validate": false
+	},
+	"wrapperStyle": {}
+}
+```
