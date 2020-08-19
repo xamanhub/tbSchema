@@ -475,7 +475,9 @@
 	}
 }
 ```
-### 11、Array组件    
+### 11、Array组件   
+* 该组件只会显示`components`的一个组件
+* `components`中需放多个组件时,需要加Map，再在Map组件中放入需要的组件
 ```json
 "arrayID": {
 	"components": {},
