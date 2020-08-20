@@ -1,5 +1,6 @@
 # 表单属性和控件
 ## 一、属性
+* `realtimeSave`:实时保存
 * `type`:控件类型
 * `dataName`:数据名称
   * 在取数据时props.mds.moduleData.dataName
