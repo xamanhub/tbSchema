@@ -340,7 +340,6 @@
 ### 8、Map组件  
 * 和Container一样没有功能，只能当做容器使用
 * 和Containe的不同：
-  * 在取数据时它里面的子控件是包含在他dataName的json custom_1:{name1:"值1",...}
   * 他自己有layout ，不需要再最外的layout写
 ```json
 "MapID": {
